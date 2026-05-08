@@ -1,0 +1,422 @@
+# About Page Layout (HTML + CSS)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Instrument Sans", sans-serif;
+    background-color: #f5f2ee;
+    color: #2b2b2b;
+}
+
+/* ---------------- MENU ---------------- */
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(245, 242, 238, 0.85);
+    backdrop-filter: blur(10px);
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 18px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.menu-links a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #8fa8ff;
+    border-radius: 999px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: -1;
+}
+
+.menu-links a:hover::before {
+    transform: scaleX(1);
+}
+
+.menu-links a:hover {
+    color: white;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.section-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 52% 48%;
+    min-height: 92vh;
+    padding-top: 75px;
+    background: #f4f1ec;
+}
+
+.hero-left {
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.hero-logo {
+    background: #2f2f2f;
+    padding: 125px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.logo-svg {
+    width: 100%;
+    height: auto;
+    fill: white;
+    display: block;
+}
+
+.about-pill {
+    background: #a8bbff;
+    padding: 18px 40px;
+    border-radius: 0;
+
+    width: 100%;
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+}
+
+.about-pill h1 {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 800;
+    color: #2b2b2b;
+}
+
+.hero-text {
+    max-width: 550px;
+    color: #555;
+    line-height: 1.5;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-top: 40px;
+}
+
+.hero-right {
+    height: calc(100vh 0px);
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---------------- STORY SECTION ---------------- */
+
+.story-section {
+    background: #f7924b;
+    padding: 80px 0;
+}
+
+.story-title {
+    text-align: center;
+    color: white;
+    font-size: 58px;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 45px;
+    text-decoration: underline wavy white;
+    text-underline-offset: 10px;
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    align-items:flex-start;
+}
+
+.story-image img {
+    width: 150%;
+    padding-top: 15%;
+    display: block;
+}
+
+.story-box {
+    background: #f5a76d;
+    color: white;
+    padding: 40px;
+    border-radius: 25px 25px 25px 25px;
+    max-width: 780px;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-left: 150px;
+    margin-top: 45px;
+}
+
+/* ---------------- PERSONALISATION ---------------- */
+
+.personalisation {
+    background: #f4f1ec;
+    padding: 70px 40px;
+}
+
+.personalisation-top {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 50px;
+    margin-bottom: 40px;
+    align-items: end;
+}
+
+.personalisation h2 {
+    font-size: 62px;
+    line-height: 0.92;
+    font-weight: 800;
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+.personalisation p {
+    max-width: 520px;
+    line-height: 1.7;
+    color: #555;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.side-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    padding-right: 0%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery img:hover {
+    transform: translateY(-5px);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-left {
+        order: 2;
+        padding: 40px 25px;
+    }
+
+    .hero-right {
+        height: 60vh;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+    }
+
+    .personalisation-top {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-pill h1 {
+        font-size: 32px;
+    }
+
+    .story-title {
+        font-size: 42px;
+    }
+
+    .personalisation h2 {
+        font-size: 42px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<header class="header">
+    <div class="logo-text">Isn't Cliché</div>
+
+    <nav class="menu-links">
+        <a href="testing_app.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <div class="hero-logo">
+
+            <svg viewBox="0 150 400 120" class="logo-svg">
+                <g transform="translate(90, 0)">
+                    <path d="m 71.015786,242.9022 c -0.629231,-1.23339 -0.686898,-2.65261 -0.149972,-3.69091 0.373617,-0.7225 0.462173,-0.74851 3.108854,-0.91323 1.498355,-0.0933 11.475376,-0.182 22.171157,-0.19722 l 19.446875,-0.0277 7.57746,1.21862 c 4.16761,0.67024 7.82878,1.21862 8.13594,1.21862 0.71038,0 0.70838,-0.50943 -0.007,-1.72151 -0.33297,-0.56435 -0.46785,-1.0554 -0.32823,-1.19501 0.24245,-0.24245 5.09482,0.32075 5.63388,0.65391 0.40781,0.25204 0.37016,3.71749 -0.044,4.05404 -0.27209,0.22107 -55.907899,1.67608 -63.23004,1.65362 l -1.78056,-0.005 z m 0.698578,-11.32147 c -0.391573,-0.64205 -1.530918,-6.79922 -1.776359,-9.59969 -0.296586,-3.38404 -0.10861,-9.14483 0.306776,-9.40155 0.349951,-0.21628 4.498246,-0.15088 5.395836,0.0851 0.651907,0.17137 0.969351,0.56221 1.77641,2.18715 l 0.982659,1.97849 -1.209452,0.6148 c -1.201003,0.6105 -1.213414,0.61119 -1.77641,0.0992 -0.555743,-0.50539 -1.576349,-1.11088 -1.872479,-1.11088 -0.580213,0 0.260047,9.62555 0.954142,10.93012 0.472418,0.88792 1.321417,0.4374 1.712378,-0.90868 0.304855,-1.04961 0.472988,-1.24688 1.183878,-1.38906 1.519842,-0.30397 1.556166,-0.27412 1.556166,1.27869 0,0.79442 -0.133536,2.34223 -0.296747,3.43958 l -0.296746,1.99518 h -3.259514 c -1.792732,0 -3.313974,-0.0893 -3.380538,-0.19843 z m 52.774286,-0.35816 c -1.65567,-0.11904 -3.04185,-0.25087 -3.0804,-0.29294 -0.0386,-0.0421 -0.20322,-3.82698 -0.36592,-8.41088 -0.1627,-4.58391 -0.36482,-8.9767 -0.44915,-9.76176 l -0.15334,-1.42738 2.33893,0.18277 c 2.58925,0.20233 7.75816,0.91805 8.08385,1.11933 0.23873,0.14755 0.28376,2.7677 0.0577,3.35684 -0.14708,0.38327 -2.04386,0.40569 -5.47188,0.0647 l -0.99219,-0.0987 v 1.53401 c 0,1.72444 0.13375,1.85263 1.93987,1.85927 1.69889,0.006 1.88879,0.22927 1.60723,1.88766 l -0.23981,1.41247 -1.35349,0.36105 -1.35348,0.36105 -0.16253,1.74046 c -0.0894,0.95725 -0.13233,1.77066 -0.0954,1.80756 0.0369,0.0369 1.4058,0.29455 3.04198,0.57254 1.63618,0.27798 3.02363,0.55418 3.08322,0.61377 0.0596,0.0596 0.041,0.85127 -0.0413,1.75928 l -0.1497,1.65094 -1.6169,-0.0378 c -0.8893,-0.0208 -2.97154,-0.13518 -4.6272,-0.25422 z M 96.3275,228.42726 c -0.366581,-1.57619 -0.805424,-3.9969 -0.975206,-5.37935 -0.326416,-2.65781 -0.27442,-10.6639 0.07149,-11.00856 0.366451,-0.36513 3.240262,-0.43253 4.783326,-0.11219 l 1.50863,0.31319 0.91921,1.8253 c 0.50556,1.00392 0.9192,1.92529 0.9192,2.04749 0,0.23734 -1.68663,1.11394 -2.14329,1.11394 -0.1503,0 -0.66351,-0.29766 -1.14048,-0.66146 -0.47697,-0.3638 -1.080945,-0.66146 -1.342168,-0.66146 -0.437013,0 -0.463793,0.23777 -0.335256,2.97657 0.07683,1.6371 0.350911,4.13742 0.609063,5.55625 0.454792,2.49957 0.491239,2.57968 1.173671,2.57968 0.60925,0 0.75681,-0.16963 1.09327,-1.25677 0.38759,-1.25236 0.39344,-1.25706 1.66652,-1.33874 l 1.27756,-0.082 -0.18947,2.06634 c -0.22866,2.49366 -0.5398,4.27362 -0.79114,4.52597 -0.10201,0.10242 -1.59239,0.22567 -3.31195,0.2739 l -3.126474,0.0877 z m 11.02213,2.38064 c -0.52924,-0.10887 -0.5831,-0.3298 -0.75048,-3.07874 -0.0992,-1.6288 -0.19979,-5.69989 -0.22359,-9.04687 l -0.0433,-6.08542 1.3696,-0.0793 1.3696,-0.0793 0.34034,2.02547 c 0.38329,2.2811 0.75027,2.62354 2.41032,2.24914 1.36336,-0.30749 1.5216,-0.47192 1.5216,-1.58116 0,-0.55319 0.0757,-1.55819 0.16826,-2.23335 l 0.16825,-1.22755 h 1.53371 c 1.23217,0 1.5606,0.091 1.67051,0.46302 0.23871,0.80794 0.99846,14.67135 0.90986,16.6026 l -0.085,1.85209 -1.65365,0.0788 c -1.44418,0.0688 -1.65376,0.0185 -1.65456,-0.39688 -0.002,-0.89391 -0.80109,-8.94154 -0.92109,-9.27304 -0.1447,-0.39973 -1.68227,-0.43402 -2.66738,-0.0595 l -0.71342,0.27125 0.10088,4.82198 0.10088,4.82199 -1.19062,0.036 c -0.65485,0.0198 -1.4472,-0.0168 -1.76078,-0.0813 z m -23.923617,-0.80064 c -1.037759,-2.72951 -2.811652,-10.99764 -3.546405,-16.52982 l -0.164172,-1.23609 1.433407,-0.17909 c 2.452061,-0.30637 2.369303,-0.39742 2.89386,3.18372 0.717146,4.89595 2.282028,10.94145 2.920671,11.28324 0.287484,0.15386 1.746006,0.40661 3.24116,0.56168 2.7165,0.28173 2.718575,0.28249 2.874668,1.06296 0.08591,0.42957 0.156206,1.18287 0.156206,1.674 v 0.89297 H 88.46636 83.697311 Z m 6.247762,-5.43799 c -0.121968,-0.38256 -1.104655,-7.61279 -1.423257,-10.47176 l -0.216074,-1.93894 1.608295,0.17204 c 2.624309,0.28074 2.443879,0.0533 2.657562,3.35021 0.104706,1.61552 0.334416,4.35073 0.510467,6.07824 L 93.13086,224.9 h -1.675821 c -1.108032,0 -1.711547,-0.11206 -1.781264,-0.33073 z m 43.268615,-12.59567 -0.53845,-1.05545 1.46522,-1.87262 c 0.80587,-1.02994 1.56063,-1.87262 1.67723,-1.87262 0.23024,0 2.13902,2.77232 2.13902,3.10671 0,0.18389 -0.70585,0.65529 -3.35906,2.24335 l -0.84551,0.50607 z M 93.3677,208.91539 c -1.38037,-0.44189 -3.572562,-1.48932 -3.569392,-1.70547 0.0014,-0.0931 0.361367,-0.79509 0.800002,-1.55994 l 0.79752,-1.39064 1.441193,0.16939 c 1.109978,0.13045 1.594994,0.0686 2.110414,-0.26911 1.321528,-0.8659 0.737808,-2.00323 -2.332736,-4.54516 -1.614058,-1.33619 -3.07672,-3.50688 -3.080976,-4.57239 -0.004,-0.99608 0.800682,-2.41252 1.607555,-2.82977 1.775273,-0.91803 5.139066,-0.29613 7.295736,1.34885 l 0.851032,0.64911 -0.415654,1.25581 c -0.228609,0.69069 -0.497811,1.34783 -0.598225,1.46031 -0.100414,0.11248 -0.634269,0.0158 -1.186343,-0.21489 -1.044244,-0.43632 -1.735751,-0.36538 -1.735751,0.17804 0,0.17411 0.715733,1.06193 1.590518,1.97293 2.602912,2.71066 3.438427,5.20443 2.497896,7.45544 -1.08183,2.58919 -3.229346,3.50773 -6.072789,2.59749 z m 25.65195,-0.48571 c 0.1677,-1.00392 1.46784,-10.42704 1.46784,-10.63853 0,-0.0788 -0.9525,-0.14324 -2.11667,-0.14324 h -2.11666 v -1.43959 c 0,-0.79178 0.1039,-1.50381 0.23089,-1.58229 0.501,-0.30964 10.91552,-2.58865 11.07961,-2.42456 0.0963,0.0963 0.22324,0.93131 0.28209,1.85558 l 0.10701,1.68048 -1.74876,0.97796 c -1.37688,0.77 -1.74876,1.10936 -1.74876,1.59585 0,2.45174 -0.85473,10.58866 -1.13069,10.76397 -0.17848,0.11339 -1.25265,0.20799 -2.38703,0.21022 l -2.06251,0.004 z m -36.198448,-3.43045 c -0.415086,-3.62264 -1.532966,-10.402 -1.927429,-11.68885 -0.141801,-0.46259 -0.04463,-0.48755 1.265374,-0.3249 3.916467,0.48625 3.630195,0.36615 3.770453,1.58182 0.514881,4.46272 1.186457,13.27255 1.023521,13.42669 -0.222875,0.21085 -2.9056,1.03101 -3.372408,1.03101 -0.18798,0 -0.468765,-1.4883 -0.759511,-4.02577 z m 21.558478,2.50441 c -1.16436,-3.15247 -2.67196,-10.97764 -2.67617,-13.89062 l -10e-4,-0.99219 h 1.58212 1.58212 l 0.56457,1.12448 c 0.82169,1.63659 3.26018,5.25962 4.01416,5.96411 l 0.6489,0.6063 -0.13279,-3.22418 -0.13279,-3.22418 0.73022,0.18327 c 0.40162,0.1008 1.10328,0.25381 1.55925,0.34001 1.38743,0.2623 1.49003,0.47432 1.49591,3.09123 0.003,1.32825 0.18012,4.20094 0.39364,6.38375 0.55558,5.67999 0.66906,5.16154 -1.12667,5.14737 l -1.52135,-0.012 -1.97688,-3.22914 c -1.21976,-1.99244 -2.01184,-3.05523 -2.0682,-2.77504 -0.0831,0.4132 0.51083,3.98798 0.90265,5.43287 0.15534,0.57283 0.0965,0.59532 -1.55696,0.59532 h -1.71838 z m 10.08854,-15.23172 c -0.32742,-0.48095 -0.59531,-0.97108 -0.59531,-1.08916 0,-0.20056 2.28331,-4.09243 2.57131,-4.38276 0.0722,-0.0728 0.75988,0.56774 1.52824,1.42334 l 1.39702,1.55563 -0.83006,0.7003 c -1.36023,1.1476 -3.29398,2.67086 -3.38812,2.66892 -0.0483,-0.001 -0.35566,-0.39532 -0.68308,-0.87627 z"/>
+                </g>
+            </svg>
+
+        </div>
+
+        <div class="about-pill">
+            <h1>ABOUT THE BRAND</h1>
+        </div>
+
+        <div class="hero-text">
+            <p>
+                Isn't Cliché is all about connecting the closest to our clients, something that we have achieved by turning this small business into a space full of personality and handmade creativity.
+                <br><br>
+                Family members support has been essential since the beginning, and every purchase became one more reason to continue creating unique crochet pieces.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+        <img src="Images/36c215d2-eac6-42fd-93ba-dca304d7161e.JPG" alt="hero image">
+    </div>
+
+</section>
+
+
+<!-- STORY -->
+
+<section class="story-section">
+
+    <div class="section-container">
+
+        <h2 class="story-title">HOW DID IT START?</h2>
+
+        <div class="story-content">
+
+            <div class="story-image">
+                <img src="Images/Captura de pantalla 2026-05-06 190008.png" alt="story image">
+            </div>
+
+            <div class="story-box">
+                <p>
+                    I have always loved handmade details and creative hobbies. One day I decided to learn crochet and little by little it became more than just a pastime.
+                    <br><br>
+                    What started with small flowers and simple accessories slowly turned into custom pieces made especially for others. Every order became a way to share creativity and make people feel represented through personalized handmade work.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PERSONALISATION -->
+
+<section class="personalisation">
+
+    <div class="personalisation-top">
+
+        <div>
+            <h2>EVERYTHING ABOUT PERSONALISATION</h2>
+
+            <p>
+                Every creation is handmade with attention to detail, allowing each client to personalize colors, characters, styles, and themes according to their personality.
+            </p>
+        </div>
+
+        <div class="side-text">
+            Because every client is unique, we try to offer a much more personal experience through customized crochet creations designed for special occasions.
+        </div>
+
+    </div>
+
+
+    <div class="gallery">
+        <img src="Images/Captura de pantalla 2026-05-06 190351.png" alt="item 1">
+        <img src="Images/Captura de pantalla 2026-05-06 190156.png" alt="item 2">
+        <img src="Images/Captura de pantalla 2026-05-06 190428.png" alt="item 3">
+        <img src="Images/Captura de pantalla 2026-05-06 190405.png" alt="item 4">
+    </div>
+
+</section>
+
+</body>
+</html>
+```
