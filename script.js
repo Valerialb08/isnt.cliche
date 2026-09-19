@@ -371,7 +371,7 @@ const products = [
   },
   {
     name: "Top Beige",
-      image: "images/JPG/top_beige.JPG",
+      image: "images/JPG/top_beige.jpg",
       inStock: false,
       specification: "Talla Personalizable",
       description: "Personalizable",
@@ -395,7 +395,7 @@ const products = [
   },
   {
     name: "Vincha/Diadema",
-      image: "images/JPG/vincha_roja.JPG",
+      image: "images/JPG/vincha_roja.jpg",
       inStock: true,
       specification: "Rojo Floreado",
       description: "Personalizable",
@@ -403,7 +403,7 @@ const products = [
   },
   {
     name: "Bandana",
-      image: "images/JPG/bandana_amarillo.JPG",
+      image: "images/JPG/bandana_amarillo.jpg",
       inStock: true,
       specification: "Amarillo",
       description: "Personalizable",
@@ -411,7 +411,7 @@ const products = [
   },
   {
     name: "Top de Granny Squares",
-      image: "images/JPG/top_granny.JPG",
+      image: "images/JPG/top_granny.jpg",
       inStock: true,
       specification: "Talla XXS-XS",
       description: "Personalizable",
@@ -419,7 +419,7 @@ const products = [
   },
   {
     name: "Top Backless Menta",
-      image: "images/JPG/top_menta_backless.JPG",
+      image: "images/JPG/top_menta_backless.jpg",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -427,7 +427,7 @@ const products = [
   },
   {
     name: "Top Backless de Lentejuelas",
-      image: "images/JPG/backless_lentejuelas.JPG",
+      image: "images/JPG/backless_lentejuelas.jpg",
       inStock: true,
       specification: "Talla XXS-XS",
       description: "Personalizable",
@@ -435,7 +435,7 @@ const products = [
   },
   {
     name: "Top Verde",
-      image: "images/JPG/top_verde.JPG",
+      image: "images/JPG/top_verde.jpg",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -443,7 +443,7 @@ const products = [
   },
   {
     name: "Top Lila Brillante",
-      image: "images/JPG/top_lila_brillos.JPG",
+      image: "images/JPG/top_lila_brillos.jpg",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -451,7 +451,7 @@ const products = [
   },
   {
     name: "Top Bandana Beige",
-      image: "images/JPG/top_bandana.JPG",
+      image: "images/JPG/top_bandana.jpg",
       inStock: true,
       specification: "Talla XXS-XS",
       description: "Personalizable",
@@ -459,7 +459,7 @@ const products = [
   },
   {
     name: "Top Strapless Azul",
-      image: "images/JPG/top_strapless.JPG",
+      image: "images/JPG/top_strapless.jpg",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -467,7 +467,7 @@ const products = [
   },
   {
     name: "Top Negro",
-      image: "images/JPG/top_negro.JPG",
+      image: "images/JPG/top_negro.jpg",
       inStock: true,
       specification: "Talla S-M",
       description: "Personalizable",
@@ -475,7 +475,7 @@ const products = [
   },
   {
     name: "Vincha/Diadema",
-      image: "images/JPG/vincha_beige.JPG",
+      image: "images/JPG/vincha_beige.jpg",
       inStock: true,
       specification: "Beige Floreado",
       description: "Personalizable",
@@ -483,7 +483,7 @@ const products = [
   },
   {
     name: "Top Multicolor",
-      image: "images/JPG/top_multi.JPG",
+      image: "images/JPG/top_multi.jpg",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
