@@ -387,7 +387,7 @@ const products = [
   },
   {
     name: "Top Verde Ondulado",
-      image: "images/JPG/top_tricot_verde.JPG",
+      image: "images/JPG/top_tricot_verde.jpg",
       inStock: true,
       specification: "Talla S-M",
       description: "Personalizable",
