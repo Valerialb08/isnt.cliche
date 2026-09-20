@@ -323,7 +323,7 @@ const products = [
   },
   {
     name: "Top Amarillo Pastel",
-      image: "images/JPG/top_amarillo.jpg",
+      image: "images/JPG/top_amarillo.JPG",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -371,7 +371,7 @@ const products = [
   },
   {
     name: "Top Beige",
-      image: "images/JPG/top_beige.jpg",
+      image: "images/JPG/top_beige.JPG",
       inStock: false,
       specification: "Talla Personalizable",
       description: "Personalizable",
@@ -387,7 +387,7 @@ const products = [
   },
   {
     name: "Top Verde Ondulado",
-      image: "images/JPG/top_tricot_verde.jpg",
+      image: "images/JPG/top_tricot_verde.JPG",
       inStock: true,
       specification: "Talla S-M",
       description: "Personalizable",
@@ -395,7 +395,7 @@ const products = [
   },
   {
     name: "Vincha/Diadema",
-      image: "images/JPG/vincha_roja.jpg",
+      image: "images/JPG/vincha_roja.JPG",
       inStock: true,
       specification: "Rojo Floreado",
       description: "Personalizable",
@@ -403,7 +403,7 @@ const products = [
   },
   {
     name: "Bandana",
-      image: "images/JPG/bandana_amarillo.jpg",
+      image: "images/JPG/bandana_amarillo.JPG",
       inStock: true,
       specification: "Amarillo",
       description: "Personalizable",
@@ -411,7 +411,7 @@ const products = [
   },
   {
     name: "Top de Granny Squares",
-      image: "images/JPG/top_granny.jpg",
+      image: "images/JPG/top_granny.JPG",
       inStock: true,
       specification: "Talla XXS-XS",
       description: "Personalizable",
@@ -419,7 +419,7 @@ const products = [
   },
   {
     name: "Top Backless Menta",
-      image: "images/JPG/top_menta_backless.jpg",
+      image: "images/JPG/top_menta_backless.JPG",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -427,7 +427,7 @@ const products = [
   },
   {
     name: "Top Backless de Lentejuelas",
-      image: "images/JPG/backless_lentejuelas.jpg",
+      image: "images/JPG/backless_lentejuelas.JPG",
       inStock: true,
       specification: "Talla XXS-XS",
       description: "Personalizable",
@@ -435,7 +435,7 @@ const products = [
   },
   {
     name: "Top Verde",
-      image: "images/JPG/top_verde.jpg",
+      image: "images/JPG/top_verde.JPG",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -443,7 +443,7 @@ const products = [
   },
   {
     name: "Top Lila Brillante",
-      image: "images/JPG/top_lila_brillos.jpg",
+      image: "images/JPG/top_lila_brillos.JPG",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -451,7 +451,7 @@ const products = [
   },
   {
     name: "Top Bandana Beige",
-      image: "images/JPG/top_bandana.jpg",
+      image: "images/JPG/top_bandana.JPG",
       inStock: true,
       specification: "Talla XXS-XS",
       description: "Personalizable",
@@ -459,7 +459,7 @@ const products = [
   },
   {
     name: "Top Strapless Azul",
-      image: "images/JPG/top_strapless.jpg",
+      image: "images/JPG/top_strapless.JPG",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -467,7 +467,7 @@ const products = [
   },
   {
     name: "Top Negro",
-      image: "images/JPG/top_negro.jpg",
+      image: "images/JPG/top_negro.JPG",
       inStock: true,
       specification: "Talla S-M",
       description: "Personalizable",
@@ -475,7 +475,7 @@ const products = [
   },
   {
     name: "Vincha/Diadema",
-      image: "images/JPG/vincha_beige.jpg",
+      image: "images/JPG/vincha_beige.JPG",
       inStock: true,
       specification: "Beige Floreado",
       description: "Personalizable",
@@ -483,7 +483,7 @@ const products = [
   },
   {
     name: "Top Multicolor",
-      image: "images/JPG/top_multi.jpg",
+      image: "images/JPG/top_multi.JPG",
       inStock: true,
       specification: "Talla XS-S",
       description: "Personalizable",
@@ -496,6 +496,14 @@ const products = [
       specification: "Lana Chenille",
       description: "Personalizable",
       category: "amigurumis"
+  },
+  {
+    name: "Top Celeste y Blanco",
+      image: "images/JPG/Top_celeste_blanco.jpg",
+      inStock: true,
+      specification: "Colores Alternados",
+      description: "Personalizable",
+      category: "ropa"
   },
 ];
 
@@ -841,6 +849,34 @@ function setupCarousel() {
   window.addEventListener("resize", updateCarousel);
 
   updateCarousel();
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener("touchstart", (event) => {
+    touchStartX = event.changedTouches[0].screenX;
+  });
+
+  track.addEventListener("touchend", (event) => {
+    touchEndX = event.changedTouches[0].screenX;
+
+    const distance = touchStartX - touchEndX;
+
+    if (Math.abs(distance) < 50) return;
+
+    const visible = visibleCards();
+    const maxIndex = Math.max(0, cards.length - visible);
+
+    if (distance > 0) {
+      // swipe LEFT → next
+      index = Math.min(index + 1, maxIndex);
+    } else {
+      // swipe RIGHT → previous
+      index = Math.max(index - 1, 0);
+    }
+
+    updateCarousel();
+  });
 }
 
 
@@ -941,3 +977,23 @@ function setupEmailLink() {
     emailLink.rel = "noopener";
   }
 }
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+
+  if (!navbar) return;
+
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 120) {
+    // scrolling DOWN
+    navbar.classList.add("nav-hidden");
+  } else {
+    // scrolling UP
+    navbar.classList.remove("nav-hidden");
+  }
+
+  lastScrollY = currentScrollY;
+});
