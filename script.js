@@ -677,19 +677,19 @@ function setupProductPreview() {
 
   /* SWIPE ON PHONE */
 
-  let touchStartX = 0;
-  let touchEndX = 0;
+  /* SWIPE / DRAG PRODUCT PREVIEW */
 
-  content.addEventListener("touchstart", (event) => {
-    touchStartX = event.changedTouches[0].screenX;
+  let startX = 0;
+
+  content.addEventListener("pointerdown", (event) => {
+    startX = event.clientX;
+    content.setPointerCapture(event.pointerId);
   });
 
-  content.addEventListener("touchend", (event) => {
-    touchEndX = event.changedTouches[0].screenX;
+  content.addEventListener("pointerup", (event) => {
+    const distance = startX - event.clientX;
 
-    const distance = touchStartX - touchEndX;
-
-    if (Math.abs(distance) < 50) return;
+    if (Math.abs(distance) < 30) return;
 
     if (distance > 0) {
       changePreview(1);
@@ -850,28 +850,26 @@ function setupCarousel() {
 
   updateCarousel();
 
-  let touchStartX = 0;
-  let touchEndX = 0;
+  /* SWIPE / DRAG CAROUSEL */
 
-  track.addEventListener("touchstart", (event) => {
-    touchStartX = event.changedTouches[0].screenX;
+  let startX = 0;
+
+  track.addEventListener("pointerdown", (event) => {
+    startX = event.clientX;
+    track.setPointerCapture(event.pointerId);
   });
 
-  track.addEventListener("touchend", (event) => {
-    touchEndX = event.changedTouches[0].screenX;
+  track.addEventListener("pointerup", (event) => {
+    const distance = startX - event.clientX;
 
-    const distance = touchStartX - touchEndX;
-
-    if (Math.abs(distance) < 50) return;
+    if (Math.abs(distance) < 30) return;
 
     const visible = visibleCards();
     const maxIndex = Math.max(0, cards.length - visible);
 
     if (distance > 0) {
-      // swipe LEFT → next
       index = Math.min(index + 1, maxIndex);
     } else {
-      // swipe RIGHT → previous
       index = Math.max(index - 1, 0);
     }
 
