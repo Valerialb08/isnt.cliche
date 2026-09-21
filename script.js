@@ -768,6 +768,22 @@ function updateProductPreview() {
     document.getElementById("previewDescription");
 
 
+  const wrapper = image.parentElement;
+
+/* RESET PREVIEW IMAGE */
+  image.style.display = "block";
+
+  if (wrapper) {
+    wrapper.classList.remove("image-placeholder");
+
+    const placeholder = wrapper.querySelector(".placeholder-text");
+
+    if (placeholder) {
+      placeholder.remove();
+    }
+  }
+
+  /* LOAD CURRENT PRODUCT IMAGE */
   image.src = product.image;
   image.alt = product.name;
 
@@ -800,6 +816,9 @@ function updateProductPreview() {
 function setupCarousel() {
   const track = document.getElementById("carouselTrack");
   if (!track) return;
+
+  const carouselWindow = track.closest(".carousel-window");
+  if (!carouselWindow) return;
 
   const cards = Array.from(track.querySelectorAll(".carousel-card"));
   const previous = document.querySelector(".carousel-prev");
@@ -851,12 +870,12 @@ function setupCarousel() {
 
   /* SWIPE / DRAG CAROUSEL */
 
- /* SWIPE CAROUSEL — PHONE + TABLET */
+ /* TOUCH SWIPE CAROUSEL */
 
   let touchStartX = 0;
   let touchStartY = 0;
 
-  track.addEventListener(
+  carouselWindow.addEventListener(
     "touchstart",
     (event) => {
       touchStartX = event.touches[0].clientX;
@@ -865,7 +884,7 @@ function setupCarousel() {
     { passive: true }
   );
 
-  track.addEventListener(
+  carouselWindow.addEventListener(
     "touchend",
     (event) => {
       const touchEndX = event.changedTouches[0].clientX;
@@ -874,11 +893,11 @@ function setupCarousel() {
       const distanceX = touchStartX - touchEndX;
       const distanceY = touchStartY - touchEndY;
 
-      /* Ignore normal vertical scrolling */
+      /* Normal vertical page scroll */
       if (Math.abs(distanceY) > Math.abs(distanceX)) return;
 
-      /* Ignore tiny horizontal movements */
-      if (Math.abs(distanceX) < 25) return;
+      /* Ignore tiny swipes */
+      if (Math.abs(distanceX) < 20) return;
 
       const visible = visibleCards();
       const maxIndex = Math.max(0, cards.length - visible);
