@@ -810,8 +810,7 @@ function setupCarousel() {
   let index = 0;
 
   function visibleCards() {
-    if (window.innerWidth <= 560) return 1;
-    if (window.innerWidth <= 850) return 2;
+    if (window.innerWidth <= 850) return 1;
     return 3;
   }
 
@@ -852,51 +851,48 @@ function setupCarousel() {
 
   /* SWIPE / DRAG CAROUSEL */
 
-  /* SWIPE / DRAG CAROUSEL */
+ /* SWIPE CAROUSEL — PHONE + TABLET */
 
-  let startX = 0;
-  let currentX = 0;
-  let isDragging = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
 
-  track.addEventListener("pointerdown", (event) => {
-    isDragging = true;
+  track.addEventListener(
+    "touchstart",
+    (event) => {
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+    },
+    { passive: true }
+  );
 
-    startX = event.clientX;
-    currentX = event.clientX;
+  track.addEventListener(
+    "touchend",
+    (event) => {
+      const touchEndX = event.changedTouches[0].clientX;
+      const touchEndY = event.changedTouches[0].clientY;
 
-    track.setPointerCapture(event.pointerId);
-  });
+      const distanceX = touchStartX - touchEndX;
+      const distanceY = touchStartY - touchEndY;
 
-  track.addEventListener("pointermove", (event) => {
-    if (!isDragging) return;
+      /* Ignore normal vertical scrolling */
+      if (Math.abs(distanceY) > Math.abs(distanceX)) return;
 
-    currentX = event.clientX;
-  });
+      /* Ignore tiny horizontal movements */
+      if (Math.abs(distanceX) < 25) return;
 
-  track.addEventListener("pointerup", (event) => {
-    if (!isDragging) return;
+      const visible = visibleCards();
+      const maxIndex = Math.max(0, cards.length - visible);
 
-    isDragging = false;
+      if (distanceX > 0) {
+        index = index >= maxIndex ? 0 : index + 1;
+      } else {
+        index = index <= 0 ? maxIndex : index - 1;
+      }
 
-    const distance = startX - currentX;
-
-    if (Math.abs(distance) < 20) return;
-
-    const visible = visibleCards();
-    const maxIndex = Math.max(0, cards.length - visible);
-
-    if (distance > 0) {
-      index = index >= maxIndex ? 0 : index + 1;
-    } else {
-      index = index <= 0 ? maxIndex : index - 1;
-    }
-
-    updateCarousel();
-  });
-
-  track.addEventListener("pointercancel", () => {
-    isDragging = false;
-  });
+      updateCarousel();
+    },
+    { passive: true }
+  );
 }
 
 
