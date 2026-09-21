@@ -1079,49 +1079,70 @@ body.preview-open {
 }
 
 
-@media (min-width: 851px) and (max-width: 1100px) {
+@media (min-width: 851px) and (max-width: 1200px) {
 
   .contact-section {
     min-height: 0;
-    padding: 32px 8vw 36px;
-    gap: 35px;
+    padding: 32px 7vw 36px;
+    gap: 28px;
   }
 
   .contact-section > div:first-child {
-    width: 58%;
+    width: 62%;
     max-width: none;
   }
 
   .section-kicker {
     font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+    white-space: nowrap;
   }
 
   .contact-section h2 {
-    font-size: 42px;
-    line-height: 1.05;
-    margin-bottom: 12px;
+    font-size: 40px;
+    line-height: 1;
     white-space: nowrap;
+    margin-bottom: 10px;
   }
 
   .contact-text {
     width: 100%;
     max-width: none;
-    font-size: 18px;
-    line-height: 1.45;
+    font-size: 17px;
+    line-height: 1.4;
   }
 
   .contact-actions {
-    width: 36%;
+    width: 34%;
     align-items: center;
   }
 
   .contact-actions .primary-button {
     margin-top: 0;
-    min-width: 240px;
-    min-height: 60px;
-    font-size: 18px;
+    min-width: 270px;
+    min-height: 58px;
+    padding: 12px 22px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .carousel-window {
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+
+  .carousel-track {
+    cursor: grab;
+    user-select: none;
+  }
+
+  .carousel-track:active {
+    cursor: grabbing;
+  }
+
+  .carousel-card img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 
   .about-title {
@@ -1137,6 +1158,23 @@ body.preview-open {
   .about-copy {
     padding-top: 35px;
     padding-bottom: 35px;
+  }
+
+  .preview-info {
+    padding-left: 20px;
+    transform: translateX(-20px);
+  }
+
+  /* PRODUCT PREVIEW SWIPE SUPPORT */
+
+  .preview-content {
+    touch-action: pan-y;
+  }
+
+  .preview-image img {
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
   }
 
 }
@@ -1314,12 +1352,8 @@ body.preview-open {
   }
 
   .carousel-window {
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
+    overflow: hidden;
+    touch-action: pan-y;
   }
 
   .carousel-window::-webkit-scrollbar {
