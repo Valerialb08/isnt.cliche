@@ -852,28 +852,50 @@ function setupCarousel() {
 
   /* SWIPE / DRAG CAROUSEL */
 
+  /* SWIPE / DRAG CAROUSEL */
+
   let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
 
   track.addEventListener("pointerdown", (event) => {
+    isDragging = true;
+
     startX = event.clientX;
+    currentX = event.clientX;
+
     track.setPointerCapture(event.pointerId);
   });
 
-  track.addEventListener("pointerup", (event) => {
-    const distance = startX - event.clientX;
+  track.addEventListener("pointermove", (event) => {
+    if (!isDragging) return;
 
-    if (Math.abs(distance) < 30) return;
+    currentX = event.clientX;
+  });
+
+  track.addEventListener("pointerup", (event) => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    const distance = startX - currentX;
+
+    if (Math.abs(distance) < 20) return;
 
     const visible = visibleCards();
     const maxIndex = Math.max(0, cards.length - visible);
 
     if (distance > 0) {
-      index = Math.min(index + 1, maxIndex);
+      index = index >= maxIndex ? 0 : index + 1;
     } else {
-      index = Math.max(index - 1, 0);
+      index = index <= 0 ? maxIndex : index - 1;
     }
 
     updateCarousel();
+  });
+
+  track.addEventListener("pointercancel", () => {
+    isDragging = false;
   });
 }
 
