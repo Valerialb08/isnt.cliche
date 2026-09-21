@@ -1663,12 +1663,18 @@ body.preview-open {
 
   .carousel-track {
     gap: 0;
+    cursor: grab;
+    user-select: none;
+  }
+
+  .carousel-track:active {
+    cursor: grabbing;
   }
 
   .carousel-card img {
+    pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
-    pointer-events: none;
   }
 
 
