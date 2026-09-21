@@ -263,12 +263,18 @@ a {
 .carousel-window {
   width: 100%;
   overflow: hidden;
+  touch-action: pan-y;
 }
+
 
 .carousel-track {
   display: flex;
   gap: 50px;
-  transition: transform .55s cubic-bezier(.2,.75,.2,1);
+
+  transition: transform .55s cubic-bezier(.2, .75, .2, 1);
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .carousel-card {
@@ -290,6 +296,11 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
 .carousel-arrow {
@@ -838,6 +849,7 @@ a {
   display: grid;
 
   grid-template-columns: 40% 60%;
+  touch-action: pan-y;
 
   transition:
     opacity .18s ease,
@@ -870,6 +882,10 @@ a {
   max-height: 430px;
 
   object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
 .preview-content.switching {
@@ -1127,22 +1143,14 @@ body.preview-open {
 
   .carousel-window {
     overflow: hidden;
-    touch-action: pan-y;
   }
 
   .carousel-track {
     cursor: grab;
-    user-select: none;
   }
 
   .carousel-track:active {
     cursor: grabbing;
-  }
-
-  .carousel-card img {
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
   }
 
   .about-title {
@@ -1161,21 +1169,11 @@ body.preview-open {
   }
 
   .preview-info {
-    padding-left: 20px;
-    transform: translateX(-20px);
+    padding-left: 85px;
+    transform: none;
   }
 
   /* PRODUCT PREVIEW SWIPE SUPPORT */
-
-  .preview-content {
-    touch-action: pan-y;
-  }
-
-  .preview-image img {
-    user-select: none;
-    -webkit-user-drag: none;
-    pointer-events: none;
-  }
 
 }
 /* =========================================================
@@ -1353,7 +1351,6 @@ body.preview-open {
 
   .carousel-window {
     overflow: hidden;
-    touch-action: pan-y;
   }
 
   .carousel-window::-webkit-scrollbar {
@@ -1665,7 +1662,7 @@ body.preview-open {
 
   .preview-content {
     grid-template-columns: 1fr;
-    grid-template-rows: 42% 58%;
+    grid-template-rows: 32% 68%;
   }
 
   .preview-image {
@@ -1754,25 +1751,16 @@ body.preview-open {
 
   .carousel-window {
     overflow: hidden;
-    touch-action: pan-y;
   }
 
   .carousel-track {
     gap: 0;
     cursor: grab;
-    user-select: none;
   }
 
   .carousel-track:active {
     cursor: grabbing;
   }
-
-  .carousel-card img {
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
-  }
-
 
   .carousel-arrow {
     font-size: 48px;
@@ -2024,7 +2012,6 @@ body.preview-open {
   .preview-content {
     grid-template-columns: 1fr;
     grid-template-rows: 42% 58%;
-    touch-action: pan-y;
   }
 
   .preview-info {
@@ -2064,9 +2051,6 @@ body.preview-open {
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    user-select: none;
-    -webkit-user-drag: none;
-    pointer-events: none;
 
     object-fit: contain;
 
