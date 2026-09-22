@@ -1,0 +1,560 @@
+[
+  {
+    "id": "ajolote-de-peluche",
+    "name": "Ajolote de Peluche",
+    "image": "images/JPG/IMG_8066.JPG",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "ramo-de-flores",
+    "name": "Ramo de Flores",
+    "image": "images/HEIC to PNG/flores_dory.png",
+    "inStock": false,
+    "specification": "Flores variadas",
+    "description": "Personalizable",
+    "category": "flores"
+  },
+  {
+    "id": "rosa",
+    "name": "Rosa",
+    "image": "images/HEIC to PNG/flor_amarilla.png",
+    "inStock": false,
+    "specification": "Rosa individual",
+    "description": "Personalizable",
+    "category": "flores"
+  },
+  {
+    "id": "dinosaurio",
+    "name": "Dinosaurio",
+    "image": "images/HEIC to PNG/dinosaurio_party.png",
+    "inStock": false,
+    "specification": "Amigurumi",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "baymax",
+    "name": "Baymax",
+    "image": "images/HEIC to PNG/baymax.png",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "cartera-beige",
+    "name": "Cartera Beige",
+    "image": "images/JPG/Cartera_beige.jpg",
+    "inStock": true,
+    "specification": "Granny Squares",
+    "description": "Personalizable",
+    "category": "carteras"
+  },
+  {
+    "id": "snoopy-piloto",
+    "name": "Snoopy Piloto",
+    "image": "images/JPG/snoopy_piloto.JPG",
+    "inStock": false,
+    "specification": "Llavero",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "dinosaurio-de-peluche",
+    "name": "Dinosaurio de Peluche",
+    "image": "images/JPG/IMG_7891.jpg",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "kirby",
+    "name": "Kirby",
+    "image": "images/JPG/IMG_7994.jpg",
+    "inStock": false,
+    "specification": "Figura de Decoración",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "pato-de-peluche",
+    "name": "Pato de Peluche",
+    "image": "images/JPG/IMG_8067.JPG",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "tote-bag-para-playa",
+    "name": "Tote bag para Playa",
+    "image": "images/JPG/tote_bag.JPG",
+    "inStock": false,
+    "specification": "Amarillo",
+    "description": "Personalizable",
+    "category": "carteras"
+  },
+  {
+    "id": "corazon-de-peluche",
+    "name": "Corazón de Peluche",
+    "image": "images/JPG/IMG_7980.JPG",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "snoopy",
+    "name": "Snoopy",
+    "image": "images/JPG/IMG_7985.JPG",
+    "inStock": false,
+    "specification": "Decoración",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "top-celeste",
+    "name": "Top Celeste",
+    "image": "images/JPG/top_celeste.jpg",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-sirena",
+    "name": "Top Sirena",
+    "image": "images/JPG/top_azul.jpg",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "tortuguita",
+    "name": "Tortuguita",
+    "image": "images/HEIC to PNG/tortuga.png",
+    "inStock": false,
+    "specification": "Amarillo y Verde",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "foca-blanca",
+    "name": "Foca Blanca",
+    "image": "images/HEIC to PNG/foca.png",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "rosa-roja",
+    "name": "Rosa Roja",
+    "image": "images/HEIC to PNG/rosa.png",
+    "inStock": false,
+    "specification": "Rosa de Pétalos",
+    "description": "Personalizable",
+    "category": "flores"
+  },
+  {
+    "id": "limoncito",
+    "name": "Limoncito",
+    "image": "images/HEIC to PNG/limon_peluche.png",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "flor-de-llavero",
+    "name": "Flor de Llavero",
+    "image": "images/HEIC to PNG/flor_keychain.png",
+    "inStock": false,
+    "specification": "Llavero",
+    "description": "Personalizable",
+    "category": "flores"
+  },
+  {
+    "id": "snoopy-tripulante",
+    "name": "Snoopy Tripulante",
+    "image": "images/HEIC to PNG/snoopy_1.png",
+    "inStock": false,
+    "specification": "Llavero",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "goku",
+    "name": "Goku",
+    "image": "images/HEIC to PNG/goku.png",
+    "inStock": false,
+    "specification": "con Birrete",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "tulipan",
+    "name": "Tulipán",
+    "image": "images/HEIC to PNG/red_tulipan.png",
+    "inStock": false,
+    "specification": "Rojo",
+    "description": "Personalizable",
+    "category": "flores"
+  },
+  {
+    "id": "bolso-cruzado",
+    "name": "Bolso Cruzado",
+    "image": "images/HEIC to PNG/cartera_larga.png",
+    "inStock": true,
+    "specification": "Marrón",
+    "description": "Personalizable",
+    "category": "carteras"
+  },
+  {
+    "id": "fantasma-de-peluche",
+    "name": "Fantasma de Peluche",
+    "image": "images/HEIC to PNG/fantasma.png",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "pulsera-de-spiderman",
+    "name": "Pulsera de Spiderman",
+    "image": "images/JPG/miles_gwen.jpg",
+    "inStock": false,
+    "specification": "Miles Morales y Gwen Stacy",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "spiderman",
+    "name": "Spiderman",
+    "image": "images/HEIC to PNG/spiderman_close.png",
+    "inStock": false,
+    "specification": "Llavero",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "porta-vasos-de-osos",
+    "name": "Porta Vasos de Osos",
+    "image": "images/HEIC to PNG/cup_holder_oso.png",
+    "inStock": false,
+    "specification": "Color Terracota ",
+    "description": "Personalizable",
+    "category": "casa"
+  },
+  {
+    "id": "mantel-de-mesa",
+    "name": "Mantel de Mesa",
+    "image": "images/HEIC to PNG/funiture.png",
+    "inStock": false,
+    "specification": "Color Terracota",
+    "description": "Personalizable",
+    "category": "casa"
+  },
+  {
+    "id": "fantasmita",
+    "name": "Fantasmita",
+    "image": "images/HEIC to PNG/fantasma_llavero.png",
+    "inStock": false,
+    "specification": "Llavero",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "limon",
+    "name": "Limón",
+    "image": "images/HEIC to PNG/limon.png",
+    "inStock": false,
+    "specification": "Llavero",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "wolverine",
+    "name": "Wolverine",
+    "image": "images/HEIC to PNG/wolverine.png",
+    "inStock": false,
+    "specification": "Llavero",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "vincha-diadema-gris",
+    "name": "Vincha/Diadema Gris",
+    "image": "images/HEIC to PNG/headband_gris_3.png",
+    "inStock": false,
+    "specification": "Triple Vuelta",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "ballenita",
+    "name": "Ballenita",
+    "image": "images/HEIC to PNG/ballena_keychain.png",
+    "inStock": false,
+    "specification": "Llavero",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "chimuelo",
+    "name": "Chimuelo",
+    "image": "images/HEIC to PNG/chimuelo.png",
+    "inStock": false,
+    "specification": "Alas Móviles",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "cartera-caracol",
+    "name": "Cartera Caracol",
+    "image": "images/HEIC to PNG/cartera_lyna.png",
+    "inStock": false,
+    "specification": "Azul con Broche",
+    "description": "Personalizable",
+    "category": "carteras"
+  },
+  {
+    "id": "brallete-amarillo-y-blanco",
+    "name": "Brallete Amarillo y Blanco",
+    "image": "images/HEIC to PNG/tops_natalia.png",
+    "inStock": false,
+    "specification": "Talla Personalizable",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "estrella-de-peluche",
+    "name": "Estrella de Peluche",
+    "image": "images/JPG/estrella.JPG",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "top-menta",
+    "name": "Top Menta",
+    "image": "images/JPG/top_ale_verde.JPG",
+    "inStock": false,
+    "specification": "Talla Personalizable",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-amarillo-pastel",
+    "name": "Top Amarillo Pastel",
+    "image": "images/JPG/top_amarillo.jpg",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "osito-carinosito",
+    "name": "Osito Cariñosito",
+    "image": "images/JPG/osito_cariñosito.JPG",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "top-blanco",
+    "name": "Top Blanco",
+    "image": "images/JPG/top_ale_sol.JPG",
+    "inStock": false,
+    "specification": "Talla Personalizable",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "porta-vasos-de-mandala",
+    "name": "Porta vasos de Mandala",
+    "image": "images/JPG/porta_vaso_mandala.JPG",
+    "inStock": false,
+    "specification": "Verde",
+    "description": "Personalizable",
+    "category": "casa"
+  },
+  {
+    "id": "huevo-estrellado-de-peluche",
+    "name": "Huevo Estrellado de Peluche",
+    "image": "images/JPG/huevo.JPG",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "schnauzer",
+    "name": "Schnauzer",
+    "image": "images/JPG/lucas.JPG",
+    "inStock": false,
+    "specification": "Recuerdo Conmemorativo",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "top-beige",
+    "name": "Top Beige",
+    "image": "images/JPG/top_beige.jpg",
+    "inStock": false,
+    "specification": "Talla Personalizable",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-lila",
+    "name": "Top Lila",
+    "image": "images/JPG/top_lila.JPG",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-verde-ondulado",
+    "name": "Top Verde Ondulado",
+    "image": "images/JPG/top_tricot_verde.jpg",
+    "inStock": true,
+    "specification": "Talla S-M",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "vincha-diadema",
+    "name": "Vincha/Diadema",
+    "image": "images/JPG/vincha_roja.jpg",
+    "inStock": true,
+    "specification": "Rojo Floreado",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "bandana",
+    "name": "Bandana",
+    "image": "images/JPG/bandana_amarillo.jpg",
+    "inStock": true,
+    "specification": "Amarillo",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-de-granny-squares",
+    "name": "Top de Granny Squares",
+    "image": "images/JPG/top_granny.jpg",
+    "inStock": true,
+    "specification": "Talla XXS-XS",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-backless-menta",
+    "name": "Top Backless Menta",
+    "image": "images/JPG/top_menta_backless.jpg",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-backless-de-lentejuelas",
+    "name": "Top Backless de Lentejuelas",
+    "image": "images/JPG/backless_lentejuelas.jpg",
+    "inStock": true,
+    "specification": "Talla XXS-XS",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-verde",
+    "name": "Top Verde",
+    "image": "images/JPG/top_verde.jpg",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-lila-brillante",
+    "name": "Top Lila Brillante",
+    "image": "images/JPG/top_lila_brillos.jpg",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-bandana-beige",
+    "name": "Top Bandana Beige",
+    "image": "images/JPG/top_bandana.jpg",
+    "inStock": true,
+    "specification": "Talla XXS-XS",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-strapless-azul",
+    "name": "Top Strapless Azul",
+    "image": "images/JPG/top_strapless.jpg",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-negro",
+    "name": "Top Negro",
+    "image": "images/JPG/top_negro.jpg",
+    "inStock": true,
+    "specification": "Talla S-M",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "vincha-diadema-2",
+    "name": "Vincha/Diadema",
+    "image": "images/JPG/vincha_beige.jpg",
+    "inStock": true,
+    "specification": "Beige Floreado",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "top-multicolor",
+    "name": "Top Multicolor",
+    "image": "images/JPG/top_multi.jpg",
+    "inStock": true,
+    "specification": "Talla XS-S",
+    "description": "Personalizable",
+    "category": "ropa"
+  },
+  {
+    "id": "pato-personalizado",
+    "name": "Pato Personalizado",
+    "image": "images/HEIC to PNG/pato_anime.png",
+    "inStock": false,
+    "specification": "Lana Chenille",
+    "description": "Personalizable",
+    "category": "amigurumis"
+  },
+  {
+    "id": "top-celeste-y-blanco",
+    "name": "Top Celeste y Blanco",
+    "image": "images/JPG/Top_celeste_blanco.jpg",
+    "inStock": true,
+    "specification": "Colores Alternados",
+    "description": "Personalizable",
+    "category": "ropa"
+  }
+]
